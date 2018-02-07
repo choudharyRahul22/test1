@@ -24,7 +24,7 @@ public class Resource {
 
 	private String getDb() {
 
-		String host = "jdbc:mysql://${env.HOSTNAME}:${env.MYSQL_PORT_3306_TCP_PORT}/${env.MYSQL_DATABASE}";
+		String host = "jdbc:mysql://${env.HOSTNAME}:3306/${env.MYSQL_DATABASE}";
 		String user = "${env.MYSQL_USER}";
 		String password = "${env.MYSQL_PASSWORD}";
 		Connection conn = null;
