@@ -24,10 +24,10 @@ public class Resource {
 
 	private String getDb() {
 
-		int port = Integer.parseInt("${env.MYSQL_PORT_3306_TCP_PORT}");
-		String host = "jdbc:mysql://${env.HOSTNAME}:port/${env.MYSQL_DATABASE}";
-		String user = "${env.MYSQL_USER}";
-		String password = "${env.MYSQL_PASSWORD}";
+		
+		String host = "jdbc:mysql://172.30.217.106:3306/sampledb";
+		String user = "iris";
+		String password = "iris";
 		Connection conn = null;
 		try {
 			conn = DriverManager.getConnection(host, user, password);
