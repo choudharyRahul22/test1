@@ -25,7 +25,6 @@ public class Resource {
 	private String getDb() {
 
 		
-		//String host = "jdbc:mysql://apsrp04981.uhc.com:3306/sampledb";
 		String host = "jdbc:mysql://mysql:3306/sampledb";
 		String user = "iris";
 		String password = "iris";
@@ -35,17 +34,20 @@ public class Resource {
 
 			System.out.println("\n\t The connection class name is : " + conn.getClass().getName());
 			System.out.println("\n\n\t GOT Connection at: " + new java.util.Date());
-			/*Statement stmt = (Statement) conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from iris_ui");
+			Statement stmt = (Statement) conn.createStatement();
+			ResultSet rs = stmt.executeQuery("select * from sampledb.iris_ui");
 			System.out.println("\n\t###########################################");
 			System.out.println("\n\tid" + "\tname" + "\t\t\trating");
+			int id = 0;
+			String name = "";
 			while (rs.next()) {
-				int id = rs.getInt("id");
-				String name = rs.getString("name");
-				String rating = rs.getString("rating");
-				System.out.println("\n\t" + id + "\t" + name + "\t" + rating);
-			}*/
+				id = rs.getInt("employee_id");
+				name = rs.getString("employee_name");
+				System.out.println("\n\t" + id + "\t" + name);
+			}
 			System.out.println("\n\t###########################################");
+			return id+" : " +name;
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
