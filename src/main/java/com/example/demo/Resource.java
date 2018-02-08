@@ -25,7 +25,8 @@ public class Resource {
 	private String getDb() {
 
 		
-		String host = "jdbc:mysql://apsrp04981.uhc.com:3306/sampledb";
+		//String host = "jdbc:mysql://apsrp04981.uhc.com:3306/sampledb";
+		String host = "jdbc:mysql://172.30.137.54:3306/sampledb";
 		String user = "iris";
 		String password = "iris";
 		Connection conn = null;
